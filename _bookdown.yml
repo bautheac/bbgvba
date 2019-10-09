@@ -1,0 +1,7 @@
+book_filename: "bautheac-BloombergVBA"
+language:
+  ui:
+    chapter_name: ""
+delete_merged_file: true
+rmd_files:
+#  html: ["index.rmd", "01-equity.rmd"]

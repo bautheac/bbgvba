@@ -1,0 +1,3 @@
+# Equity data extractor
+
+Download VBA augmented Excel workbook [here](./assets/pullit.xlsm).

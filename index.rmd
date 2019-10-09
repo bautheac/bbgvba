@@ -1,0 +1,18 @@
+--- 
+title: "Full stack data-science finance (small) project"
+author: "Olivier Bauthéac"
+date: "`r Sys.Date()`"
+description: "fintech"
+github-repo: "bautheac/MLWorkshop"
+site: bookdown::bookdown_site
+documentclass: book
+# bibliography: ["/media/storage/Dropbox/research/literature/references.bib", packages.bib]
+bibliography: ["O:/Dropbox/research/literature/references.bib", packages.bib]
+biblio-style: apalike
+link-citations: yes
+---
+
+
+# At a glance
+
+Although a Bloomberg terminal is a gold mine for the researcher/student in finance and/or financial economics, working with Bloomberg can be intimidating at first. I present here a set of tools designed to facilitate the matter by substituting complexity for practicality. 
