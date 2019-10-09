@@ -1,13 +1,12 @@
 --- 
-title: "Full stack data-science finance (small) project"
+title: "VBA augmented Excel tools for Bloomberg data extraction"
 author: "Olivier Bauthéac"
 date: "`r Sys.Date()`"
 description: "fintech"
-github-repo: "bautheac/MLWorkshop"
+github-repo: "bautheac/BloombergVBA"
 site: bookdown::bookdown_site
 documentclass: book
-# bibliography: ["/media/storage/Dropbox/research/literature/references.bib", packages.bib]
-bibliography: ["O:/Dropbox/research/literature/references.bib", packages.bib]
+# bibliography: ["references.bib", packages.bib]
 biblio-style: apalike
 link-citations: yes
 ---
