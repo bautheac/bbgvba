@@ -9,7 +9,7 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="./">Bloomberg VBA</a></li>
+        <li><a href="https://www.bautheac.com/software/BloombergVBA/_book/index.html">Bloomberg VBA</a></li>
       after: |
         <li><a href="https://github.com/bautheac/BloombergVBA">Github</a></li>
         <li><a href="http://bautheac.com/software.html">Software</a></li>
