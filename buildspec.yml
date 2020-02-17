@@ -26,7 +26,7 @@ phases:
   build:
     commands:
       # - command
-      - aws s3 rm --recursive "s3://bautheac.com/software/BloombergVBA/"
+      - aws s3 rm --recursive "s3://bautheac.com/tech/BloombergVBA/"
   #post_build:
     #commands:
       # - command
