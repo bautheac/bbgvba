@@ -1,6 +1,6 @@
 bookdown::gitbook:
   lib_dir: "book_assets"
-  split_by: "section"
+  split_by: "chapter"
   always_allow_html: true
   includes:
       after_body: disqus.html
@@ -9,10 +9,9 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="https://www.bautheac.com/software/BloombergVBA/_book/index.html">Bloomberg VBA</a></li>
+        <li><a href="https://www.bautheac.com/tech/BloombergVBA/_book/index.html">Bloomberg VBA</a></li>
       after: |
         <li><a href="https://github.com/bautheac/BloombergVBA">Github</a></li>
-        <li><a href="http://bautheac.com/software.html">Software</a></li>
         <li><a href="http://bautheac.com/index.html">Home</a></li>
-    edit: https://github.com/bautheac/MLWorkshop/edit/master/%s
+    edit: https://github.com/bautheac/BloombergVBA/edit/master/%s
 

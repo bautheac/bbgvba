@@ -2,7 +2,7 @@
 
 Download VBA augmented Excel workbook [here](./assets/equity.xlsm). Don't forget to enable macros!
 
-#### Specs table
+## Specs table
 
 <center> ![Specifications table.](./assets/table - specs.jpg) </center>
 
@@ -13,7 +13,7 @@ Set parameters for the data query to the desired values in this table. These inc
 * Frequency: select the frequency at which you want the data to be queried. Accepted values are "d" (daily), "w" (weekly), "m" (monthly), "y" (yearly).  
 * Currency: insert the desired currency for the query. If omitted, defaults to the default currency for the security as specified in Bloomberg.
 
-#### Fields table
+## Fields table
 
 <center> ![Fields table.](./assets/table - variables.jpg) </center>
 
@@ -27,7 +27,7 @@ Delete fields in a similar way:
 
 
 
-#### Tickers table
+## Tickers table
 
 <center> ![Tickers table.](./assets/table - tickers.jpg) </center>
 
@@ -40,7 +40,7 @@ Delete fields in a similar way:
 <center> ![Delete column.](./assets/table - delete column.jpg) </center>
 
 
-#### Query
+## Query
 
 <center> ![Query button.](./assets/button - query.jpg) </center>
 

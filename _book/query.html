@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>VBA augmented Excel tools for Bloomberg data extraction</title>
+  <title>2.4 Query | VBA augmented Excel tools for Bloomberg data extraction</title>
   <meta name="description" content="fintech" />
   <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="VBA augmented Excel tools for Bloomberg data extraction" />
+  <meta property="og:title" content="2.4 Query | VBA augmented Excel tools for Bloomberg data extraction" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="bautheac/BloombergVBA" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="VBA augmented Excel tools for Bloomberg data extraction" />
+  <meta name="twitter:title" content="2.4 Query | VBA augmented Excel tools for Bloomberg data extraction" />
   
   <meta name="twitter:description" content="fintech" />
   
@@ -24,15 +24,15 @@
 <meta name="author" content="Olivier Bauthéac" />
 
 
-<meta name="date" content="2020-02-18" />
+<meta name="date" content="2020-02-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="tickers-table.html"/>
 
-<link rel="next" href="equity-data-extractor.html"/>
 <script src="book_assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="book_assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -66,18 +66,19 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="https://www.bautheac.com/tech/BloombergVBA/_book/index.html">Bloomberg VBA</a></li>
+<li><a href="https://www.bautheac.com/software/BloombergVBA/_book/index.html">Bloomberg VBA</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> At a glance</a></li>
 <li class="chapter" data-level="2" data-path="equity-data-extractor.html"><a href="equity-data-extractor.html"><i class="fa fa-check"></i><b>2</b> Equity data extractor</a><ul>
-<li class="chapter" data-level="2.1" data-path="equity-data-extractor.html"><a href="equity-data-extractor.html#specs-table"><i class="fa fa-check"></i><b>2.1</b> Specs table</a></li>
-<li class="chapter" data-level="2.2" data-path="equity-data-extractor.html"><a href="equity-data-extractor.html#fields-table"><i class="fa fa-check"></i><b>2.2</b> Fields table</a></li>
-<li class="chapter" data-level="2.3" data-path="equity-data-extractor.html"><a href="equity-data-extractor.html#tickers-table"><i class="fa fa-check"></i><b>2.3</b> Tickers table</a></li>
-<li class="chapter" data-level="2.4" data-path="equity-data-extractor.html"><a href="equity-data-extractor.html#query"><i class="fa fa-check"></i><b>2.4</b> Query</a></li>
+<li class="chapter" data-level="2.1" data-path="specs-table.html"><a href="specs-table.html"><i class="fa fa-check"></i><b>2.1</b> Specs table</a></li>
+<li class="chapter" data-level="2.2" data-path="fields-table.html"><a href="fields-table.html"><i class="fa fa-check"></i><b>2.2</b> Fields table</a></li>
+<li class="chapter" data-level="2.3" data-path="tickers-table.html"><a href="tickers-table.html"><i class="fa fa-check"></i><b>2.3</b> Tickers table</a></li>
+<li class="chapter" data-level="2.4" data-path="query.html"><a href="query.html"><i class="fa fa-check"></i><b>2.4</b> Query</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/bautheac/BloombergVBA">Github</a></li>
+<li><a href="http://bautheac.com/software.html">Software</a></li>
 <li><a href="http://bautheac.com/index.html">Home</a></li>
 
 </ul>
@@ -97,16 +98,15 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">VBA augmented Excel tools for Bloomberg data extraction</h1>
-<p class="author"><em>Olivier Bauthéac</em></p>
-<p class="date"><em>2020-02-18</em></p>
-</div>
-<div id="at-a-glance" class="section level1">
-<h1><span class="header-section-number">1</span> At a glance</h1>
-<p>Although a Bloomberg terminal is a gold mine for the researcher/student in finance and/or financial economics, working with Bloomberg can be intimidating at first. I present here a set of tools designed to facilitate the matter by substituting complexity for practicality.</p>
+<div id="query" class="section level2">
+<h2><span class="header-section-number">2.4</span> Query</h2>
+<center>
+<img src="assets/button%20-%20query.jpg" alt="Query button." />
+</center>
+<p>Once you’re all set hit the query button and wait for the data to be fetched. Note that you must be on a working Bloomberg terminal with an open Bloomberg session to be able to successfully run the query.</p>
 
 </div>
+<!-- </div> -->
 <div id="disqus_thread"></div>
 <script>
 (function() { // DON'T EDIT BELOW THIS LINE
@@ -124,8 +124,8 @@ s.setAttribute('data-timestamp', +new Date());
           </div>
         </div>
       </div>
+<a href="tickers-table.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="equity-data-extractor.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>
@@ -156,7 +156,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/bautheac/BloombergVBA/edit/master/index.rmd",
+"link": "https://github.com/bautheac/MLWorkshop/edit/master/01-equity.rmd",
 "text": "Edit"
 },
 "history": {

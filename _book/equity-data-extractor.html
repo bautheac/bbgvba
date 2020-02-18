@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>2 Equity data extractor | VBA augmented Excel tools for Bloomberg data extraction</title>
   <meta name="description" content="fintech" />
-  <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
   <meta property="og:title" content="2 Equity data extractor | VBA augmented Excel tools for Bloomberg data extraction" />
   <meta property="og:type" content="book" />
@@ -24,14 +24,14 @@
 <meta name="author" content="Olivier Bauthéac" />
 
 
-<meta name="date" content="2019-11-07" />
+<meta name="date" content="2020-02-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html">
+<link rel="prev" href="index.html"/>
 
 <script src="book_assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -40,6 +40,9 @@
 <link href="book_assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="book_assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="book_assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -63,19 +66,18 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="https://www.bautheac.com/software/BloombergVBA/_book/index.html">Bloomberg VBA</a></li>
+<li><a href="https://www.bautheac.com/tech/BloombergVBA/_book/index.html">Bloomberg VBA</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> At a glance</a></li>
 <li class="chapter" data-level="2" data-path="equity-data-extractor.html"><a href="equity-data-extractor.html"><i class="fa fa-check"></i><b>2</b> Equity data extractor</a><ul>
-<li class="chapter" data-level="2.0.0.1" data-path="equity-data-extractor.html"><a href="equity-data-extractor.html#specs-table"><i class="fa fa-check"></i><b>2.0.0.1</b> Specs table</a></li>
-<li class="chapter" data-level="2.0.0.2" data-path="equity-data-extractor.html"><a href="equity-data-extractor.html#fields-table"><i class="fa fa-check"></i><b>2.0.0.2</b> Fields table</a></li>
-<li class="chapter" data-level="2.0.0.3" data-path="equity-data-extractor.html"><a href="equity-data-extractor.html#tickers-table"><i class="fa fa-check"></i><b>2.0.0.3</b> Tickers table</a></li>
-<li class="chapter" data-level="2.0.0.4" data-path="equity-data-extractor.html"><a href="equity-data-extractor.html#query"><i class="fa fa-check"></i><b>2.0.0.4</b> Query</a></li>
+<li class="chapter" data-level="2.1" data-path="equity-data-extractor.html"><a href="equity-data-extractor.html#specs-table"><i class="fa fa-check"></i><b>2.1</b> Specs table</a></li>
+<li class="chapter" data-level="2.2" data-path="equity-data-extractor.html"><a href="equity-data-extractor.html#fields-table"><i class="fa fa-check"></i><b>2.2</b> Fields table</a></li>
+<li class="chapter" data-level="2.3" data-path="equity-data-extractor.html"><a href="equity-data-extractor.html#tickers-table"><i class="fa fa-check"></i><b>2.3</b> Tickers table</a></li>
+<li class="chapter" data-level="2.4" data-path="equity-data-extractor.html"><a href="equity-data-extractor.html#query"><i class="fa fa-check"></i><b>2.4</b> Query</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/bautheac/BloombergVBA">Github</a></li>
-<li><a href="http://bautheac.com/software.html">Software</a></li>
 <li><a href="http://bautheac.com/index.html">Home</a></li>
 
 </ul>
@@ -98,8 +100,8 @@
 <div id="equity-data-extractor" class="section level1">
 <h1><span class="header-section-number">2</span> Equity data extractor</h1>
 <p>Download VBA augmented Excel workbook <a href="./assets/equity.xlsm">here</a>. Don’t forget to enable macros!</p>
-<div id="specs-table" class="section level4">
-<h4><span class="header-section-number">2.0.0.1</span> Specs table</h4>
+<div id="specs-table" class="section level2">
+<h2><span class="header-section-number">2.1</span> Specs table</h2>
 <center>
 <img src="assets/table%20-%20specs.jpg" alt="Specifications table." />
 </center>
@@ -114,8 +116,8 @@
 <li>Currency: insert the desired currency for the query. If omitted, defaults to the default currency for the security as specified in Bloomberg.</li>
 </ul>
 </div>
-<div id="fields-table" class="section level4">
-<h4><span class="header-section-number">2.0.0.2</span> Fields table</h4>
+<div id="fields-table" class="section level2">
+<h2><span class="header-section-number">2.2</span> Fields table</h2>
 <center>
 <img src="assets/table%20-%20variables.jpg" alt="Fields table." />
 </center>
@@ -128,8 +130,8 @@
 <img src="assets/table%20-%20delete%20row.jpg" alt="Delete row." />
 </center>
 </div>
-<div id="tickers-table" class="section level4">
-<h4><span class="header-section-number">2.0.0.3</span> Tickers table</h4>
+<div id="tickers-table" class="section level2">
+<h2><span class="header-section-number">2.3</span> Tickers table</h2>
 <center>
 <img src="assets/table%20-%20tickers.jpg" alt="Tickers table." />
 </center>
@@ -142,8 +144,8 @@
 <img src="assets/table%20-%20delete%20column.jpg" alt="Delete column." />
 </center>
 </div>
-<div id="query" class="section level4">
-<h4><span class="header-section-number">2.0.0.4</span> Query</h4>
+<div id="query" class="section level2">
+<h2><span class="header-section-number">2.4</span> Query</h2>
 <center>
 <img src="assets/button%20-%20query.jpg" alt="Query button." />
 </center>
@@ -174,11 +176,13 @@ s.setAttribute('data-timestamp', +new Date());
   </div>
 <script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>
 <script src="book_assets/gitbook-2.6.7/js/lunr.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="book_assets/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="book_assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="book_assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="book_assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="book_assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -186,12 +190,11 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
-"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -199,10 +202,14 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/bautheac/MLWorkshop/edit/master/01-equity.rmd",
+"link": "https://github.com/bautheac/BloombergVBA/edit/master/01-equity.rmd",
 "text": "Edit"
 },
 "history": {
+"link": null,
+"text": null
+},
+"view": {
 "link": null,
 "text": null
 },
