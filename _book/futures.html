@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Futures | Bloomberg Excel query tool for time series data</title>
+  <meta name="description" content="Although a Bloomberg terminal is a gold mine for the researcher/student in finance and/or financial economics, working with Bloomberg can be intimidating at first. The Excel tool hereby put forward is designed to facilitate the matter by substituting complexity for practicality." />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Futures | Bloomberg Excel query tool for time series data" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Although a Bloomberg terminal is a gold mine for the researcher/student in finance and/or financial economics, working with Bloomberg can be intimidating at first. The Excel tool hereby put forward is designed to facilitate the matter by substituting complexity for practicality." />
+  <meta name="github-repo" content="bautheac/bbgvba" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Futures | Bloomberg Excel query tool for time series data" />
+  
+  <meta name="twitter:description" content="Although a Bloomberg terminal is a gold mine for the researcher/student in finance and/or financial economics, working with Bloomberg can be intimidating at first. The Excel tool hereby put forward is designed to facilitate the matter by substituting complexity for practicality." />
+  
+
+<meta name="author" content="Olivier Bauthéac" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="equity.html"/>
+
+<script src="book_assets/jquery-2.2.3/jquery.min.js"></script>
+<link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="book_assets/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="https://www.bautheac.com/tech/BloombergVBA/_book/index.html">Bloomberg VBA</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> At a glance</a></li>
+<li class="chapter" data-level="2" data-path="preliminary-configuration.html"><a href="preliminary-configuration.html"><i class="fa fa-check"></i><b>2</b> Preliminary configuration</a><ul>
+<li class="chapter" data-level="2.1" data-path="preliminary-configuration.html"><a href="preliminary-configuration.html#bloomberg"><i class="fa fa-check"></i><b>2.1</b> Bloomberg</a></li>
+<li class="chapter" data-level="2.2" data-path="preliminary-configuration.html"><a href="preliminary-configuration.html#excel"><i class="fa fa-check"></i><b>2.2</b> Excel</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="equity.html"><a href="equity.html"><i class="fa fa-check"></i><b>3</b> Equity</a><ul>
+<li class="chapter" data-level="3.1" data-path="equity.html"><a href="equity.html#global-settings"><i class="fa fa-check"></i><b>3.1</b> Global settings</a></li>
+<li class="chapter" data-level="3.2" data-path="equity.html"><a href="equity.html#firm-level-settings"><i class="fa fa-check"></i><b>3.2</b> Firm level settings</a></li>
+<li class="chapter" data-level="3.3" data-path="equity.html"><a href="equity.html#coming-up"><i class="fa fa-check"></i><b>3.3</b> Coming up</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="equity.html"><a href="equity.html#parameters-table"><i class="fa fa-check"></i><b>3.3.1</b> Parameters table</a></li>
+<li class="chapter" data-level="3.3.2" data-path="equity.html"><a href="equity.html#fields-table"><i class="fa fa-check"></i><b>3.3.2</b> Fields table</a></li>
+<li class="chapter" data-level="3.3.3" data-path="equity.html"><a href="equity.html#tickers-table"><i class="fa fa-check"></i><b>3.3.3</b> Tickers table</a></li>
+<li class="chapter" data-level="3.3.4" data-path="equity.html"><a href="equity.html#static-data-table"><i class="fa fa-check"></i><b>3.3.4</b> Static data table</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="futures.html"><a href="futures.html"><i class="fa fa-check"></i><b>4</b> Futures</a><ul>
+<li class="chapter" data-level="4.1" data-path="equity.html"><a href="equity.html#global-settings"><i class="fa fa-check"></i><b>4.1</b> Global settings</a></li>
+<li class="chapter" data-level="4.2" data-path="futures.html"><a href="futures.html#futures-series-settings"><i class="fa fa-check"></i><b>4.2</b> Futures series settings</a></li>
+<li class="chapter" data-level="4.3" data-path="equity.html"><a href="equity.html#coming-up"><i class="fa fa-check"></i><b>4.3</b> Coming up</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="equity.html"><a href="equity.html#parameters-table"><i class="fa fa-check"></i><b>4.3.1</b> Parameters table</a></li>
+<li class="chapter" data-level="4.3.2" data-path="equity.html"><a href="equity.html#fields-table"><i class="fa fa-check"></i><b>4.3.2</b> Fields table</a></li>
+<li class="chapter" data-level="4.3.3" data-path="equity.html"><a href="equity.html#tickers-table"><i class="fa fa-check"></i><b>4.3.3</b> Tickers table</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/bautheac/bbgvba">Github</a></li>
+<li><a href="http://bautheac.com/index.html">Home</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Bloomberg Excel query tool for time series data</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="futures" class="section level1">
+<h1><span class="header-section-number">4</span> Futures</h1>
+<p>The Bloomberg query Excel workbook for futures times series is available for download <a href="./assets/workbooks/simple%20interface/futures.xlsm">here</a>.</p>
+<div id="global-settings" class="section level2">
+<h2><span class="header-section-number">4.1</span> Global settings</h2>
+<p>The global settings live on the worksheet named “query”:</p>
+<br />
+<center>
+<img src="assets/pics/Futures%20-%20settings.jpg" title="fig:" alt="Global settings" />
+</center>
+<p><br /></p>
+<p>From there, input a start date and end date in the appropriate format (dd/mm/yyyy) as well as a frequency. The data are available at the daily (d), weekly (w), monthly (m) , quarterly (q) and yearly (y) frequencies. Start date, end date and frequency default to 01/01/1970, today’s date and daily respectively.</p>
+</div>
+<div id="futures-series-settings" class="section level2">
+<h2><span class="header-section-number">4.2</span> Futures series settings</h2>
+<p>Assets are mapped to “tickers” in the Bloomberg world. Querying futures data therefore requires the corresponding ticker(s) for the futures or futures series for which data is desired. Tickers can be found by opening a Bloomberg window and typing the name of the asset for which futures data is desired in the search bar, the futures’ generic ticker will soon appear in the search results. Futures comes in series that include multiple contracts addressing various maturities over the same year. Each contract comes with its own ticker with the tickers for a series constructed on the same pattern and the only difference belonging to the contract’s position on the term structure. For example, the generic ticker for the aluminium futures series, traded on the London Metal Exchange (LME), is “LAA Comdty”. The ticker for nearby contract on this series (the contract with the shortest maturity) is “LA1 Comdty” while that for the second contract is “LA2 Comdty” and so on. Once collected, tickers can be used here to query time series data for the corresponding futures series. This workbook comes with an example query for some metal futures series traded on the LME, including aluminium, copper, lead, nickel, steel, tin and zinc. Click on the aluminium tab:</p>
+<br />
+<center>
+<img src="assets/pics/Futures%20-%20series%20-%201.jpg" />
+</center>
+<p><br /></p>
+<p>The futures contract ticker goes in the top left cell (“A1”): “LA1 Comdty” is the ticker for the nearby contract on the LME aluminium term structure.</p>
+<p><br /></p>
+<p>Variables are mapped to codes in the Bloomberg world; codes for particular variables can be retrieved from a Bloomberg session by typing variable names in the search bar. The corresponding codes will soon be displayed in the search results. Once collected the codes can be used here to query firm level data. On a futures series’ spreadsheet the variable codes go on the second row from column “B” onwards:</p>
+<br />
+<center>
+<img src="assets/pics/Futures%20-%20series%20-%202.jpg" />
+</center>
+<p><br /></p>
+<p>In this example the variables queried for are volume (“PX_VOLUME”), open price (“PX_OPEN”), high price (“PX_HIGH”), low price (“PX_LOW”) and close price (“PX_LAST”).<br />
+The data will be provided from the earliest date available on or after the start date provided. In this example data is provided from 1997 onwards while the start date for the query is January, 1<sup>st</sup>, 1990. These contracts were not yet traded on the LME in 1990, data is therefore provided from the earliest date for which there are quotation records in the Bloomberg database. Variables for which data is not available for particular dates will be shown as “#N/A N/A”. In this example only the close price data is available from 1997; data for the other variables is only provided from 1998 onwards. Variables for which data is not available at the desired frequency will be provided at the highest frequency available with the corresponding figures repeated for all dates belonging to the corresponding period.<br />
+Any number of variables can be added by inputting their codes in the next available columns. The open interest (“OPEN_INT”) figure can be added as follows:</p>
+<br />
+<center>
+<img src="assets/pics/Futures%20-%20series%20-%203.jpg" />
+</center>
+<p><br /></p>
+<p>After the query is run the data shows up in the corresponding columns:</p>
+<br />
+<center>
+<img src="assets/pics/Futures%20-%20series%20-%204.jpg" />
+</center>
+<p><br /></p>
+<p>Similarly any number of contract on the series can be added by inputting the corresponding ticker on the first row to the right of the rightmost data column, leaving one column blank, and copying and pasting the variable cells:</p>
+<br />
+<center>
+<img src="assets/pics/Futures%20-%20series%20-%205.jpg" />
+</center>
+<p><br /></p>
+<p>The input variables for the leftmost contract apply for all the contracts in the series. After the query is run the data shows up in the corresponding columns:</p>
+<br />
+<center>
+<img src="assets/pics/Futures%20-%20series%20-%206.jpg" />
+</center>
+<p><br /></p>
+<p>Any number of futures series can be added. To add a series, create a new tab by clicking the plus icon to the right of the rightmost tab:</p>
+<br />
+<center>
+<img src="assets/pics/Futures%20-%20series%20-%207.jpg" />
+</center>
+<p><br /></p>
+<p>Input the contract tickers and variable codes:</p>
+<br />
+<center>
+<img src="assets/pics/Futures%20-%20series%20-%208.jpg" />
+</center>
+<p><br /></p>
+<p>The worksheet can be renamed by right-clicking on the corresponding tab:</p>
+<br />
+<center>
+<img src="assets/pics/Futures%20-%20series%20-%209.jpg" />
+</center>
+<p><br /></p>
+<p>The query can then by run by going back to the “query tab” and clicking the “query” button:</p>
+<br />
+<center>
+<img src="assets/pics/Futures%20-%20series%20-%2010.jpg" />
+</center>
+<p><br /></p>
+<p>After a few seconds the data should be populated for all firms and variables:</p>
+<br />
+<center>
+<img src="assets/pics/Futures%20-%20series%20-%2011.jpg" />
+</center>
+<br />
+<center>
+<img src="assets/pics/Futures%20-%20series%20-%2012.jpg" />
+</center>
+<br />
+<center>
+<img src="assets/pics/Futures%20-%20series%20-%2013.jpg" />
+</center>
+<br />
+<center>
+<img src="assets/pics/Futures%20-%20series%20-%2014.jpg" />
+</center>
+<br />
+<center>
+<img src="assets/pics/Futures%20-%20series%20-%2015.jpg" />
+</center>
+<br />
+<center>
+<img src="assets/pics/Futures%20-%20series%20-%2016.jpg" />
+</center>
+<br />
+<center>
+<img src="assets/pics/Futures%20-%20series%20-%2017.jpg" />
+</center>
+<p><br /></p>
+</div>
+<div id="coming-up" class="section level2">
+<h2><span class="header-section-number">4.3</span> Coming up</h2>
+<p>The development of the Bloomberg query tool hereby put forward has now reached the beta version stage; the product is ready for being tested for feedback by end users. The next development stage will be dedicated to user experience, focussing in particular on improving the user interface. User navigation through the data sheets should be limited to the maximum and ideally would become irrelevant. This will be achieved by migrating all settings to the query sheet which shall become the sole interface to the end user:</p>
+<br />
+<center>
+<img src="assets/pics/Equity%20-%20interface%20-%201.jpg" style="width:80.0%" />
+</center>
+<p><br /></p>
+<div id="parameters-table" class="section level3">
+<h3><span class="header-section-number">4.3.1</span> Parameters table</h3>
+<center>
+<img src="assets/pics/Futures%20-%20table%20-%20params.jpg" title="fig:" alt="Parameters table" />
+</center>
+<p>Parameters for the data query will be set to the desired values in a dedicated table:</p>
+<ul>
+<li><strong>Start date</strong>: start date for the query here in the following format: dd/mm/yyyy.<br />
+</li>
+<li><strong>End date</strong>: end date for the query here in the following format: dd/mm/yyyy. If omitted, defaults to the current system date.<br />
+</li>
+<li><strong>Frequency</strong>: frequency at which you want the data to be queried. Available frequencies are “d” (daily), “w” (weekly), “m” (monthly), “q” (quarterly), “y” (yearly).<br />
+</li>
+<li><strong>Currency</strong>: insert the desired currency for the query. If omitted, defaults to the default currency for the security as specified in Bloomberg.</li>
+<li><strong>Term structure length</strong>: number of contracts in the various desired series to query data for starting from the nearby contract. Defaults to 5: queries data for the first five contracts on the term structure of the corresponding futures series.</li>
+<li><strong>Roll type</strong>.<br />
+Bloomberg allows to construct futures times series using a number of different roll methods. Rolling in futures parlance refers to the set of transaction that occurs when a position is moved from one futures to the next as the current position contract nears maturity. The current version of the query tool hereby put forward restricts the time series construction to rolling with the active contract, where the roll is contingent on liquidity. The next version will allow to use all the roll methods put forward by Bloomberg. The methods available include “Relative to Expiration”, “Fixed Day of Month”, “With Active Future”, “Relative to First Notice”, “At First Delivery” and “At Option Expiration”. Default to “With Active Future” (A).</li>
+<li><strong>Roll delay - days</strong>: when constructing a futures times series with a “relative” roll type (“Relative to Expiration”, “Relative to First Notice”), allows to set the delay for the roll in days relative to the corresponding event.</li>
+<li><strong>Roll delay - months</strong>: when constructing a futures times series with a “relative” roll type (“Relative to Expiration”, “Relative to First Notice”), allows to set the delay for the roll in months relative to the corresponding event.</li>
+<li><strong>Roll adjustment method</strong>: Bloomberg allows to adjust the entire futures price series for the impact of the roll. Various methods are available to that end including “Difference”, “Ratio”, and “Average”. Further details on each of these can be found by <a href="./assets/workbooks/roll%20adjustment%20methods.xlsx">here</a>.</li>
+</ul>
+</div>
+<div id="fields-table" class="section level3">
+<h3><span class="header-section-number">4.3.2</span> Fields table</h3>
+<p>Similarly, desired variables for the query will be input in a dedicated table:</p>
+<center>
+<img src="assets/pics/Futures%20-%20table%20-%20variables.jpg" title="fig:" alt="Fields table" />
+</center>
+<p>The desired field(s) for the data query will be indicated by the user in this table using the corresponding Bloomberg symbol(s). Query fields will be added or deleted by adding or removing rows from the table as desired. This will be achieved by right clicking on a cell in the table, navigating to the “insert” tab and selecting the desired action:</p>
+<ul>
+<li>**New query field:<br />
+
+<center>
+<img src="assets/pics/Futures%20-%20table%20-%20add%20row.jpg" title="fig:" alt="Add query field" />
+</center></li>
+<li>**Delete query field:<br />
+
+<center>
+<img src="assets/pics/Futures%20-%20table%20-%20delete%20row.jpg" title="fig:" alt="Delete query field" />
+</center></li>
+</ul>
+</div>
+<div id="tickers-table" class="section level3">
+<h3><span class="header-section-number">4.3.3</span> Tickers table</h3>
+<p>Tickers will also live on a dedicated table:</p>
+<center>
+<img src="assets/pics/Futures%20-%20table%20-%20tickers.jpg" title="fig:" alt="Tickers table" />
+</center>
+<p>Tickers will be added or deleted as desired in the same way as fields are dealt with in the corresponding table as demonstrated above.</p>
+
+</div>
+</div>
+</div>
+<div id="disqus_thread"></div>
+<script>
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//bautheac.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the
+<a href="https://disqus.com/?ref_noscript">
+  comments powered by Disqus.</a></noscript>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="equity.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/lunr.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/bautheac/BloombergVBA/edit/master/02-futures.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

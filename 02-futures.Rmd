@@ -1,0 +1,121 @@
+# Futures
+
+The Bloomberg query Excel workbook for futures times series is available for download [here](./assets/workbooks/simple interface/futures.xlsm). 
+
+
+## Global settings
+
+The global settings live on the worksheet named "query": 
+
+<br /> <center> ![Global settings](./assets/pics/Futures - settings.jpg) </center> <br />  
+
+From there, input a start date and end date in the appropriate format (dd/mm/yyyy) as well as a frequency. The data are available at the daily (d), weekly (w), monthly (m) , quarterly (q) and yearly (y) frequencies. Start date, end date and frequency default to 01/01/1970, today's date and daily respectively. 
+
+## Futures series settings
+
+Assets are mapped to "tickers" in the Bloomberg world. Querying futures data therefore requires the corresponding ticker(s) for the futures or futures series for which data is desired. Tickers can be found by opening a Bloomberg window and typing the name of the asset for which futures data is desired in the search bar, the futures' generic ticker will soon appear in the search results. Futures comes in series that include multiple contracts addressing various maturities over the same year. Each contract comes with its own ticker with the tickers for a series constructed on the same pattern and the only difference belonging to the contract's position on the term structure. For example, the generic ticker for the aluminium futures series, traded on the London Metal Exchange (LME), is "LAA Comdty". The ticker for nearby contract on this series (the contract with the shortest maturity) is "LA1 Comdty" while that for the second contract is "LA2 Comdty" and so on. Once collected, tickers can be used here to query time series data for the corresponding futures series. This workbook comes with an example query for some metal futures series traded on the LME, including aluminium, copper, lead, nickel, steel, tin and zinc. Click on the aluminium tab:  
+
+<br /> <center> ![](./assets/pics/Futures - series - 1.jpg) </center> <br />  
+
+
+The futures contract ticker goes in the top left cell ("A1"): "LA1 Comdty" is the ticker for the nearby contract on the LME aluminium term structure.
+
+<br />
+
+Variables are mapped to codes in the Bloomberg world; codes for particular variables can be retrieved from a Bloomberg session by typing variable names in the search bar. The corresponding codes will soon be displayed in the search results. Once collected the codes can be used here to query firm level data. On a futures series' spreadsheet the variable codes go on the second row from column "B" onwards: 
+
+<br /> <center> ![](./assets/pics/Futures - series - 2.jpg) </center> <br />  
+
+In this example the variables queried for are volume ("PX_VOLUME"), open price ("PX_OPEN"), high price ("PX_HIGH"), low price ("PX_LOW") and close price ("PX_LAST").  
+The data will be provided from the earliest date available on or after the start date provided. In this example data is provided from 1997 onwards while the start date for the query is January, 1^st^, 1990. These contracts were not yet traded on the LME in 1990, data is therefore provided from the earliest date for which there are quotation records in the Bloomberg database. Variables for which data is not available for particular dates will be shown as "#N/A N/A". In this example only the close price data is available from 1997; data for the other variables is only provided from 1998 onwards. Variables for which data is not available at the desired frequency will be provided at the highest frequency available with the corresponding figures repeated for all dates belonging to the corresponding period.  
+Any number of variables can be added by inputting their codes in the next available columns. The open interest ("OPEN_INT") figure can be added as follows:
+
+<br /> <center> ![](./assets/pics/Futures - series - 3.jpg) </center> <br />  
+
+After the query is run the data shows up in the corresponding columns:  
+
+<br /> <center> ![](./assets/pics/Futures - series - 4.jpg) </center> <br />  
+
+Similarly any number of contract on the series can be added by inputting the corresponding ticker on the first row to the right of the rightmost data column, leaving one column blank, and copying and pasting the variable cells:
+
+<br /> <center> ![](./assets/pics/Futures - series - 5.jpg) </center> <br />  
+
+The input variables for the leftmost contract apply for all the contracts in the series. After the query is run the data shows up in the corresponding columns:  
+
+<br /> <center> ![](./assets/pics/Futures - series - 6.jpg) </center> <br />  
+
+Any number of futures series can be added. To add a series, create a new tab by clicking the plus icon to the right of the rightmost tab:  
+
+<br /> <center> ![](./assets/pics/Futures - series - 7.jpg) </center> <br />  
+
+Input the contract tickers and variable codes:  
+
+<br /> <center> ![](./assets/pics/Futures - series - 8.jpg) </center> <br />  
+
+The worksheet can be renamed by right-clicking on the corresponding tab:  
+
+<br /> <center> ![](./assets/pics/Futures - series - 9.jpg) </center> <br />  
+
+The query can then by run by going back to the "query tab" and clicking the "query" button: 
+
+<br /> <center> ![](./assets/pics/Futures - series - 10.jpg) </center> <br />  
+
+After a few seconds the data should be populated for all firms and variables:  
+
+<br /> <center> ![](./assets/pics/Futures - series - 11.jpg) </center>  
+<br /> <center> ![](./assets/pics/Futures - series - 12.jpg) </center>  
+<br /> <center> ![](./assets/pics/Futures - series - 13.jpg) </center>  
+<br /> <center> ![](./assets/pics/Futures - series - 14.jpg) </center>  
+<br /> <center> ![](./assets/pics/Futures - series - 15.jpg) </center>  
+<br /> <center> ![](./assets/pics/Futures - series - 16.jpg) </center>  
+<br /> <center> ![](./assets/pics/Futures - series - 17.jpg) </center> <br />  
+
+
+
+## Coming up
+
+The development of the Bloomberg query tool hereby put forward has now reached the beta version stage; the product is ready for being tested for feedback by end users. The next development stage will be dedicated to user experience, focussing in particular on improving the user interface. User navigation through the data sheets should be limited to the maximum and ideally would become irrelevant. This will be achieved by migrating all settings to the query sheet which shall become the sole interface to the end user:  
+
+<br /> <center> ![](./assets/pics/Equity - interface - 1.jpg){ width=80% } </center> <br />  
+
+
+### Parameters table
+
+<center> ![Parameters table](./assets/pics/Futures - table - params.jpg "") </center>
+
+Parameters for the data query will be set to the desired values in a dedicated table:  
+
+* **Start date**: start date for the query here in the following format: dd/mm/yyyy.  
+* **End date**: end date for the query here in the following format: dd/mm/yyyy. If omitted, defaults to the current system date.  
+* **Frequency**: frequency at which you want the data to be queried. Available frequencies are "d" (daily), "w" (weekly), "m" (monthly), "q" (quarterly), "y" (yearly).  
+* **Currency**: insert the desired currency for the query. If omitted, defaults to the default currency for the security as specified in Bloomberg.
+* **Term structure length**: number of contracts in the various desired series to query data for starting from the nearby contract. Defaults to 5: queries data for the first five contracts on the term structure of the corresponding futures series.
+* **Roll type**.  
+Bloomberg allows to construct futures times series using a number of different roll methods. Rolling in futures parlance refers to the set of transaction that occurs when a position is moved from one futures to the next as the current position contract nears maturity. The current version of the query tool hereby put forward restricts the time series construction to rolling with the active contract, where the roll is contingent on liquidity. The next version will allow to use all the roll methods put forward by Bloomberg. The methods available include "Relative to Expiration", "Fixed Day of Month", "With Active Future", "Relative to First Notice", "At First Delivery" and "At Option Expiration". Default to "With Active Future" (A).
+* **Roll delay - days**: when constructing a futures times series with a "relative" roll type ("Relative to Expiration", "Relative to First Notice"), allows to set the delay for the roll in days relative to the corresponding event.
+* **Roll delay - months**: when constructing a futures times series with a "relative" roll type ("Relative to Expiration", "Relative to First Notice"), allows to set the delay for the roll in months relative to the corresponding event.
+* **Roll adjustment method**: Bloomberg allows to adjust the entire futures price series for the impact of the roll. Various methods are available to that end including "Difference", "Ratio", and "Average". Further details on each of these can be found by [here](./assets/workbooks/roll adjustment methods.xlsx). 
+
+### Fields table
+
+Similarly, desired variables for the query will be input in a dedicated table: 
+
+<center> ![Fields table](./assets/pics/Futures - table - variables.jpg) </center>
+
+The desired field(s) for the data query will be indicated by the user in this table using the corresponding Bloomberg symbol(s). Query fields will be added or deleted by adding or removing rows from the table as desired. This will be achieved by right clicking on a cell in the table, navigating to the "insert" tab and selecting the desired action:
+
+* **New query field:   
+<center> ![Add query field](./assets/pics/Futures - table - add row.jpg) </center>
+* **Delete query field:  
+<center> ![Delete query field](./assets/pics/Futures - table - delete row.jpg) </center>
+
+
+
+### Tickers table
+
+Tickers will also live on a dedicated table: 
+
+<center> ![Tickers table](./assets/pics/Futures - table - tickers.jpg) </center>  
+
+Tickers will be added or deleted as desired in the same way as fields are dealt with in the corresponding table as demonstrated above.  
+

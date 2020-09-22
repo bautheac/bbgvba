@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Equity data extractor | VBA augmented Excel tools for Bloomberg data extraction</title>
-  <meta name="description" content="fintech" />
-  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+  <title>2 Equity data extractor | Bloomberg Excel query tool for time series data extraction</title>
+  <meta name="description" content="Although a Bloomberg terminal is a gold mine for the researcher/student in finance and/or financial economics, working with Bloomberg can be intimidating at first. The Excel tool hereby put forward is designed to facilitate the matter by substituting complexity for practicality." />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Equity data extractor | VBA augmented Excel tools for Bloomberg data extraction" />
+  <meta property="og:title" content="2 Equity data extractor | Bloomberg Excel query tool for time series data extraction" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="fintech" />
-  <meta name="github-repo" content="bautheac/BloombergVBA" />
+  <meta property="og:description" content="Although a Bloomberg terminal is a gold mine for the researcher/student in finance and/or financial economics, working with Bloomberg can be intimidating at first. The Excel tool hereby put forward is designed to facilitate the matter by substituting complexity for practicality." />
+  <meta name="github-repo" content="bautheac/bbgvba" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Equity data extractor | VBA augmented Excel tools for Bloomberg data extraction" />
+  <meta name="twitter:title" content="2 Equity data extractor | Bloomberg Excel query tool for time series data extraction" />
   
-  <meta name="twitter:description" content="fintech" />
+  <meta name="twitter:description" content="Although a Bloomberg terminal is a gold mine for the researcher/student in finance and/or financial economics, working with Bloomberg can be intimidating at first. The Excel tool hereby put forward is designed to facilitate the matter by substituting complexity for practicality." />
   
 
 <meta name="author" content="Olivier Bauthéac" />
 
 
-<meta name="date" content="2020-02-18" />
+<meta name="date" content="2020-09-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,6 +50,7 @@
 
 
 
+<script src="book_assets/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 
@@ -71,13 +72,14 @@
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> At a glance</a></li>
 <li class="chapter" data-level="2" data-path="equity-data-extractor.html"><a href="equity-data-extractor.html"><i class="fa fa-check"></i><b>2</b> Equity data extractor</a><ul>
-<li class="chapter" data-level="2.1" data-path="equity-data-extractor.html"><a href="equity-data-extractor.html#specs-table"><i class="fa fa-check"></i><b>2.1</b> Specs table</a></li>
-<li class="chapter" data-level="2.2" data-path="equity-data-extractor.html"><a href="equity-data-extractor.html#fields-table"><i class="fa fa-check"></i><b>2.2</b> Fields table</a></li>
-<li class="chapter" data-level="2.3" data-path="equity-data-extractor.html"><a href="equity-data-extractor.html#tickers-table"><i class="fa fa-check"></i><b>2.3</b> Tickers table</a></li>
-<li class="chapter" data-level="2.4" data-path="equity-data-extractor.html"><a href="equity-data-extractor.html#query"><i class="fa fa-check"></i><b>2.4</b> Query</a></li>
+<li class="chapter" data-level="2.1" data-path="equity-data-extractor.html"><a href="equity-data-extractor.html#preliminary-configuration"><i class="fa fa-check"></i><b>2.1</b> Preliminary configuration</a></li>
+<li class="chapter" data-level="2.2" data-path="equity-data-extractor.html"><a href="equity-data-extractor.html#specs-table"><i class="fa fa-check"></i><b>2.2</b> Specs table</a></li>
+<li class="chapter" data-level="2.3" data-path="equity-data-extractor.html"><a href="equity-data-extractor.html#fields-table"><i class="fa fa-check"></i><b>2.3</b> Fields table</a></li>
+<li class="chapter" data-level="2.4" data-path="equity-data-extractor.html"><a href="equity-data-extractor.html#tickers-table"><i class="fa fa-check"></i><b>2.4</b> Tickers table</a></li>
+<li class="chapter" data-level="2.5" data-path="equity-data-extractor.html"><a href="equity-data-extractor.html#query"><i class="fa fa-check"></i><b>2.5</b> Query</a></li>
 </ul></li>
 <li class="divider"></li>
-<li><a href="https://github.com/bautheac/BloombergVBA">Github</a></li>
+<li><a href="https://github.com/bautheac/bbgvba">Github</a></li>
 <li><a href="http://bautheac.com/index.html">Home</a></li>
 
 </ul>
@@ -89,7 +91,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">VBA augmented Excel tools for Bloomberg data extraction</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Bloomberg Excel query tool for time series data extraction</a>
           </h1>
         </div>
 
@@ -99,11 +101,22 @@
             <section class="normal" id="section-">
 <div id="equity-data-extractor" class="section level1">
 <h1><span class="header-section-number">2</span> Equity data extractor</h1>
-<p>Download VBA augmented Excel workbook <a href="./assets/equity.xlsm">here</a>. Don’t forget to enable macros!</p>
-<div id="specs-table" class="section level2">
-<h2><span class="header-section-number">2.1</span> Specs table</h2>
+<p>The Bloomberg query Excel workbook is available for download <a href="./assets/workbooks/simple%20interface/equity.xlsm">here</a>.</p>
+<div id="preliminary-configuration" class="section level2">
+<h2><span class="header-section-number">2.1</span> Preliminary configuration</h2>
+Macros are required for the query tool to work properly but are disabled by default in Excel. To enable them developer tools have to be accessible from the Excel’s ribbon. Clicking File, Options, Customize Ribbon in an open Excel workbook would open a page similar to the following:
 <center>
-<img src="assets/table%20-%20specs.jpg" alt="Specifications table." />
+<img src="assets/pics/Enable%20macros%20-%2001.jpg" title="fig:developer tools" alt="Developer tools" />
+</center>
+Make sure the “Developer” box is ticked and click OK. the Developer tools tab now shows up in the Excel’s ribbon. From the developer tools tab click Macro Security and enable macros by ticking two boxes on the corresponding settings page:
+<center>
+<img src="assets/pics/Enable%20macros%20-%2002.jpg" title="fig:" alt="Enable macros" />
+</center>
+</div>
+<div id="specs-table" class="section level2">
+<h2><span class="header-section-number">2.2</span> Specs table</h2>
+<center>
+<img src="./assets/table%20-%20specs.jpg" title="fig:" alt="Specifications table." />
 </center>
 <p>Set parameters for the data query to the desired values in this table. These include:</p>
 <ul>
@@ -117,37 +130,37 @@
 </ul>
 </div>
 <div id="fields-table" class="section level2">
-<h2><span class="header-section-number">2.2</span> Fields table</h2>
+<h2><span class="header-section-number">2.3</span> Fields table</h2>
 <center>
-<img src="assets/table%20-%20variables.jpg" alt="Fields table." />
+<img src="./assets/table%20-%20variables.jpg" title="fig:" alt="Fields table." />
 </center>
 <p>Indicate the desired field(s) for the data query in this table by using the corresponding Bloomberg symbol(s). Bloomberg uses symbols to refer to security variables. You can find desired field symbols on a Bloomberg terminal by typing the full name of a variable in the search bar of a Bloomberg window and hitting the GO button. The corresponding symbol will appear in search results. For instance the Bloomberg symbol for a security close price is “PX_LAST” while that for the book value per share is “BOOK_VAL_PER_SH”, etc. Add or delete fields from the table as desired for the corresponding query. Add a new field by adding a row to the table and filling the corresponding values. Right clic on a cell in the table, navigate to the “insert” tab and select the desired action:</p>
 <center>
-<img src="assets/table%20-%20add%20row.jpg" alt="Add row." />
+<img src="./assets/table%20-%20add%20row.jpg" title="fig:" alt="Add row." />
 </center>
 <p>Delete fields in a similar way:</p>
 <center>
-<img src="assets/table%20-%20delete%20row.jpg" alt="Delete row." />
+<img src="./assets/table%20-%20delete%20row.jpg" title="fig:" alt="Delete row." />
 </center>
 </div>
 <div id="tickers-table" class="section level2">
-<h2><span class="header-section-number">2.3</span> Tickers table</h2>
+<h2><span class="header-section-number">2.4</span> Tickers table</h2>
 <center>
-<img src="assets/table%20-%20tickers.jpg" alt="Tickers table." />
+<img src="./assets/table%20-%20tickers.jpg" title="fig:" alt="Tickers table." />
 </center>
 <p>Indicate the desired security(ies) for the data query in this table by using the corresponding Bloomberg ticker(s). Bloomberg uses tickers to refer to securities. You can find desired tickers on a Bloomberg terminal by typing the full name of a security in the search bar of a Bloomberg window and hitting the GO button. The corresponding ticker will appear in search results. For example the Bloomberg ticker for the Archer-Daniels-Midland corporation is “ADM US Equity” while that for Hewlett Packard is “HPE US Equity”, etc. Add or delete tickers from the table as desired in the same way as you add or delete fields in the fields table as demonstrated above. This table also queries static, qualitative data for the corresponding securities. Add or delete fields from the table as desired for the corresponding query. Add a new field by adding a column to the table and filling the corresponding values. Right clic on a cell in the table, navigate to the “insert” tab and select the desired action:</p>
 <center>
-<img src="assets/table%20-%20add%20column.jpg" alt="Add column." />
+<img src="./assets/table%20-%20add%20column.jpg" title="fig:" alt="Add column." />
 </center>
 <p>Delete fields in a similar way:</p>
 <center>
-<img src="assets/table%20-%20delete%20column.jpg" alt="Delete column." />
+<img src="./assets/table%20-%20delete%20column.jpg" title="fig:" alt="Delete column." />
 </center>
 </div>
 <div id="query" class="section level2">
-<h2><span class="header-section-number">2.4</span> Query</h2>
+<h2><span class="header-section-number">2.5</span> Query</h2>
 <center>
-<img src="assets/button%20-%20query.jpg" alt="Query button." />
+<img src="./assets/button%20-%20query.jpg" title="fig:" alt="Query button." />
 </center>
 <p>Once you’re all set hit the query button and wait for the data to be fetched. Note that you must be on a working Bloomberg terminal with an open Bloomberg session to be able to successfully run the query.</p>
 
