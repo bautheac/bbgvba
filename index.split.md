@@ -1,0 +1,42 @@
+--- 
+title: "Bloomberg Excel query tool for time series data"
+author: "Olivier Bauthéac"
+date: ""
+description: "Although a Bloomberg terminal is a gold mine for the researcher/student in finance and/or financial economics, working with Bloomberg can be intimidating at first. The Excel tool hereby put forward is designed to facilitate the matter by substituting complexity for practicality."
+github-repo: "bautheac/bbgvba"
+site: bookdown::bookdown_site
+documentclass: book
+# bibliography: ["references.bib", packages.bib]
+biblio-style: apalike
+link-citations: yes
+---
+
+
+# At a glance
+
+Sitting on the desks of 325,000 of the world’s most influential decision makers, the Bloomberg Terminal is a modern icon of financial markets. It delivers unparalleled coverage of markets and securities with information across asset classes — from fixed income to equities, to foreign exchange, commodities and derivatives — integrated in one place and delivered in real time to any internet connected desktop or mobile device. The Bloomberg Office Tools suite comes with an Excel add in that allows the user to pull Bloomberg data directly from any Excel workbook. The Excel add in has a few shortcomings when in comes to time series queries however. The data retrieved is typically meant to be processed and analysed using a programming language (R, Python, etc.) or a data processing software (Stata, Eviews, etc.). The Excel add in crams all the query results into a single spreadsheet, mixing tickers and variables, which makes further machine led manipulation rather tedious. Besides the add in takes a singleton approach to the data query and is not well designed for recurrence. The available refresh function updates the query living on a particular spreadsheet by filling potential existing gaps but does not complete the times series beyond the date it was originally made. In other words, a query made sometimes last year for a particular set of assets and variables could originally have shown missing data for some combination(s) of asset(s), variable(s) and date(s) or period(s). The missing data could have been added to the Bloomberg database over the course of the past year and refreshing the query today would fill the corresponding gaps. It would not however update the time series with data beyond the date the query was originally made last year and the user would be left with a full year of missing data. Time series data predominates in finance and financial economics; these defects therefore come at a significant cost in convenience for research work in those fields. The query engine put forward hereby addresses these issues and provides the researcher with a convenient tool for financial times series querying and updating.
+
+
+
+# Preliminary configuration
+
+## Bloomberg
+
+The tools proposed here only work on a Bloomberg terminal. Once logged in on a Bloomberg terminal make sure a Bloomberg session is open before proceeding further. 
+
+
+## Excel
+
+Macros are required for the query tools hereby put forward to work properly but are disabled by default in Excel. To enable them the developer tools have to be accessible from the Excel's ribbon. Clicking File, Options, Customize Ribbon in an open Excel workbook opens a page similar to the following:  
+
+<br /> <center> ![Developer tools](./assets/pics/Enable macros - 01.jpg "developer tools") </center> <br />  
+
+
+Make sure the "Developer" box is ticked and click OK. the Developer tools tab now shows up in the Excel's ribbon. From the developer tools tab click "Macro Security" and enable macros by ticking two boxes on the corresponding settings page:  
+
+<br /> <center> ![Enable macros](./assets/pics/Enable macros - 02.jpg) </center> <br />  
+
+
+Click OK. Macros are now enabled; you're all set.
+
+<!--chapter:end:index.rmd-->
