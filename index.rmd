@@ -1,5 +1,5 @@
 --- 
-title: "Bloomberg Excel query tool for time series data"
+title: "Bloomberg Excel query tools for time series data"
 author: "Olivier Bauthéac"
 date: ""
 description: "Although a Bloomberg terminal is a gold mine for the researcher/student in finance and/or financial economics, working with Bloomberg can be intimidating at first. The Excel tool hereby put forward is designed to facilitate the matter by substituting complexity for practicality."

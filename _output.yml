@@ -9,7 +9,7 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="https://www.bautheac.com/tech/BloombergVBA/_book/index.html">Bloomberg VBA</a></li>
+        <li><a href="https://www.bautheac.com/tech/bbgvba/_book/index.html">Bloomberg Excel query tools for time series data</a></li>
       after: |
         <li><a href="https://github.com/bautheac/bbgvba">Github</a></li>
         <li><a href="http://bautheac.com/index.html">Home</a></li>
