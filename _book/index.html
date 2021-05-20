@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Bloomberg Excel query tools for end of the day time series data</title>
+  <title>Bloomberg Excel systematic query tools for end of the day time series data</title>
   <meta name="description" content="Excel tools for systematic end of the day (EOD) data retrieval from Bloomberg." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Bloomberg Excel query tools for end of the day time series data" />
+  <meta property="og:title" content="Bloomberg Excel systematic query tools for end of the day time series data" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="bautheac/bbgvba" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Bloomberg Excel query tools for end of the day time series data" />
+  <meta name="twitter:title" content="Bloomberg Excel systematic query tools for end of the day time series data" />
   
   <meta name="twitter:description" content="Excel tools for systematic end of the day (EOD) data retrieval from Bloomberg." />
   
@@ -99,7 +99,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Bloomberg Excel query tools for end of the day time series data</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Bloomberg Excel systematic query tools for end of the day time series data</a>
           </h1>
         </div>
 
@@ -108,12 +108,12 @@
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">Bloomberg Excel query tools for end of the day time series data</h1>
+<h1 class="title">Bloomberg Excel systematic query tools for end of the day time series data</h1>
 <p class="author"><em>Olivier Bauthéac</em></p>
 </div>
 <div id="at-a-glance" class="section level1">
 <h1><span class="header-section-number">1</span> At a glance</h1>
-<p>The Bloomberg Terminal is a modern icon of financial markets. It delivers unparalleled coverage of markets and securities with information across asset classes–from fixed income to equities, to foreign exchange, commodities and derivatives–integrated in one place and delivered in real time to any internet connected desktop or mobile device. The Bloomberg Office Tools suite comes with an Excel add-in that allows the user to pull Bloomberg data directly from any Excel workbook. The Excel add-in has a few shortcomings when in comes to time series queries however. The data retrieved is typically meant to be processed and analysed using a programming language (R, Python, etc.) or a data processing software (Stata, Eviews, etc.). The Excel add-in packs all the query results into a single spreadsheet, mixing tickers and variables, which makes further computational processing rather tedious. Besides the add-in takes a singleton approach to the data query and is not well designed for recurrence. The available “refresh” function updates the query living on a particular spreadsheet by filling potential existing gaps but does not complement the time series beyond the date it was originally made. In other words, a query made sometimes last year for a particular set of assets and variables could originally have shown missing data for some combination(s) of asset(s), variable(s) and date(s) or period(s). The missing data could have been added to the Bloomberg database since the query was made and refreshing the query today would fill the corresponding gaps. It would not however update the time series with data beyond the date of the original the query and the user would be left missing data for the period from the original query date to the current date. Time series data plays a central role in finance and financial economics; these defects therefore come at a significant cost in convenience for research work in those fields. The query engines offered here address these issues and provide the researcher with convenient tools for querying and updating financial end of the day time series data.</p>
+<p>The Bloomberg Terminal is a modern icon of financial markets. It delivers unparalleled coverage of markets and securities with information across asset classes–from fixed income to equities, to foreign exchange, commodities and derivatives–integrated in one place and delivered in real time to any internet connected desktop or mobile device. The Bloomberg Office Tools suite comes with an Excel add-in that allows the user to pull Bloomberg data directly from any Excel workbook. The Excel add-in seems designed for convenience and immediate ibidem data consumption and consequently comes with a few shortcomings when further processing out of Excel, potentially repeated in time, is involved. The data retrieved for research in finance is typically meant to be further processed and analysed using a programming language (R, Python, etc.) or a data processing software (Stata, Eviews, etc.). The Excel add-in packs all the query results into a single spreadsheet, mixing tickers and variables, which makes further computational processing rather tedious. Besides the add-in takes a singleton approach to the data query and is not well designed for recurrence. The available “refresh” function updates the query living on a particular spreadsheet by filling potential existing gaps but does not complement the time series beyond the date it was originally made. In other words, a query made sometimes last year for a particular set of assets and variables could originally have shown missing data for some combination(s) of asset(s), variable(s) and date(s) or period(s). The missing data could have been added to the Bloomberg database since the query was made and refreshing the query today would fill the corresponding gaps. It would not however update the time series with data beyond the date of the original the query and the user would be left missing data for the period from the original query date to the current date. Time series data plays a central role in finance and financial economics; these defects therefore come at a significant cost in convenience for research work in those fields. The query engines offered here address these issues and provide the researcher with convenient tools for querying and updating financial end of the day time series data.</p>
 </div>
 <div id="disqus_thread"></div>
 <script>
