@@ -69,7 +69,7 @@
 <!-- <br /> <center> ![](./assets/pics/Equity - interface - 1.jpg){ width=80% } </center> <br />   -->
 
 
-The Bloomberg query Excel workbook for equity times series is available for download [here](./assets/workbooks/simple interface/equity.xlsm). The user interface to the query engine lives on the "Query" worksheet:  
+The Bloomberg query Excel workbook for equity times series is available for download [here](./assets/workbooks/advanced interface/equity.xlsm). The user interface to the query engine lives on the "Query" worksheet:  
 
 <center> ![User interface](./assets/pics/Equity - UI.png "User interface") </center>
 
