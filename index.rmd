@@ -27,12 +27,12 @@ The tools offered here only work on a Bloomberg terminal or any device with a co
 
 ## Excel
 
-Macros are required for the query tools hereby put forward to work properly but are disabled by default in Excel. To enable them the developer tools have to be accessible from the Excel ribbon. Clicking File, Options, Customize Ribbon in an open Excel workbook opens a page similar to the following:  
+Macros are required for the query tools to work properly but are disabled by default in Excel. To enable them the developer tools have to be accessible from the Excel ribbon. Clicking File, Options, Customize Ribbon in an open Excel workbook opens a page similar to the following:  
 
 <br /> <center> ![Developer tools](./assets/pics/Enable macros - 01.jpg "developer tools") </center> <br />  
 
 
-Make sure the "Developer" box is ticked and click OK. the Developer tools tab now shows up in the Excel ribbon. From the developer tools tab click "Macro Security" and enable macros by ticking two boxes on the corresponding settings page:  
+Make sure the "Developer" box is ticked and click OK. The Developer tools tab is now displayed in the Excel ribbon. From the developer tools tab click "Macro Security" and enable macros by ticking two boxes on the corresponding settings page:  
 
 <br /> <center> ![Enable macros](./assets/pics/Enable macros - 02.jpg "macros") </center> <br />  
 
